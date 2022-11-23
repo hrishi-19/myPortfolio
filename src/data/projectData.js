@@ -1,6 +1,7 @@
-import logo from '../static/animeIo.png'
+import animeIo from '../static/animeIo.png'
 import mitra1 from '../static/mitra1.jpg'
 import mitra2 from '../static/mitra2.jpg'
+import buddyBlog from '../static/buddyBlog.png'
 export const projects=[
     {
         title:"Covid 19 Bed Allocation",
@@ -19,14 +20,14 @@ export const projects=[
     {
         title:"AnimeIo",
         content:"AnimeIo is a anime search web site built with ReactJs driven by Jikan API. User is listed with genres, and can search for an anime. Liquid layout and cross device compatible with responsive design.",
-        imgUrl:logo,
+        imgUrl:animeIo,
         github:"https://github.com/hrishi-19/Mitra",
         live:"https://animeio.netlify.app/"
     },
     {
         title:"buddyBlog",
         content:"BuddyBlog is blog site driven by ReactJs and firebase. User authentication using firebase auth, state mangagement with Redux and Thunk and styled with tailwind Css.",
-        imgUrl:"https://i.ibb.co/SVbSgJd/main.png",
+        imgUrl:buddyBlog,
         github:"https://github.com/hrishi-19/Mitra",
         live:"https://buddyblog.netlify.app/"
     },
