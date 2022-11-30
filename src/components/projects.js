@@ -5,7 +5,7 @@ import { projects } from "../data/projectData";
 import { RiLiveFill } from 'react-icons/ri';
 function Projects() {
     return (
-        <div className=" content sm:w-2/3  sm:max-lg:w-4/5 w-5/6 h-auto overflow-auto font-sans pb-24">
+        <div className=" content sm:w-2/3  sm:max-lg:w-4/5 w-5/6 h-auto overflow-auto font-sans pb-32">
             <p className="sm:text-4xl text-2xl text-white font-extrabold py-4 relative pseudo-line">Projects</p>
             <p className="sm:text-2xl text-xl text-gray-300 font-light">Here are a few pojects </p>
             {
@@ -38,8 +38,8 @@ function Projects() {
                                             </button>}
                                         </div>
                                     </div>
-                                    <div className="basis-1/2 p-3 rounded-md">
-                                        <img src={project.imgUrl} alt="" />
+                                    <div className="basis-1/2 p-3 rounded-md  ">
+                                        <img src={project.imgUrl} alt={project.title} />
                                     </div>
                                 </div>
                             </div>

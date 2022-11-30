@@ -5,7 +5,7 @@ function Skill() {
     const programming = skills.slice(0, 4);
     const framework = skills.slice(4,)
     return (
-        <div className=" content sm:w-2/3  sm:max-lg:w-4/5 w-5/6 h-auto overflow-auto font-sans pb-24">
+        <div className=" content sm:w-2/3  sm:max-lg:w-4/5 w-5/6 overflow-auto font-sans pb-32">
             <p className="sm:text-4xl text-2xl text-white font-extrabold py-4 relative pseudo-line">Skills</p>
             <p className="sm:text-2xl text-xl text-gray-300 font-light">Here are some to the technologies that I have worked on</p>
             <p className="sm:text-lg text-md text-white font-semibold mt-5 py-3">GENERAL PROGRAMMING</p>

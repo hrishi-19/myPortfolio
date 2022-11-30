@@ -6,7 +6,7 @@ import AnimateText from "./textAnimator";
 
 function Home() {
     return (
-        <div className=" content sm:w-2/3  sm:max-lg:w-4/5 w-5/6 h-auto overflow-auto font-sans pb-24">
+        <div className=" content sm:w-2/3  sm:max-lg:w-4/5 w-5/6 h-auto overflow-auto font-sans pb-32">
             <div className="skill-box w-full sm:p-5 p-2">
                 <p className="sm:text-3xl text-xl text-fuchsia-500 font-bold">Hello, I am</p>
                 <p className="sm:text-4xl text-2xl text-white font-extrabold py-4"> Hrishikesh Kamath</p>
