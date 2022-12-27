@@ -40,10 +40,10 @@ function Contact() {
                     <form className="w-5/6 h-full sm:p-2 p-0 flex flex-col  text-slate-600" onSubmit={handleSubmit}>
 
 
-                        <input type="text" name="name" className="w-full mt-3 py-3 px-2 bg-slate-200  rounded-md outline-3 outline-cyan-600" placeholder="Full name"  onChange={handleChange} value={formData.name}/>
-                        <input type="text" name="email" className="w-full mt-3 py-3 px-2 bg-slate-200  rounded-md outline-3 outline-cyan-600" placeholder="your Email" onChange={handleChange} value={formData.email}/>
-                        <input type="text" name="subject"  className="w-full mt-3 py-3 px-2 bg-slate-200 rounded-md outline-3 outline-cyan-600" placeholder="Subject" onChange={handleChange} value={formData.subject}/>
-                        <textarea name="message" cols="30" rows="10" className="w-full mt-3 py-3 px-2 bg-slate-200  rounded-md outline-3 outline-cyan-600" resize="none" placeholder="Message" onChange={handleChange}  value={formData.message}></textarea>
+                        <input type="text" name="name" className="w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600" placeholder="Full name"  onChange={handleChange} value={formData.name}/>
+                        <input type="text" name="email" className="w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600" placeholder="your Email" onChange={handleChange} value={formData.email}/>
+                        <input type="text" name="subject"  className="w-full mt-3 p-2 bg-slate-200 rounded-md outline-3 outline-cyan-600" placeholder="Subject" onChange={handleChange} value={formData.subject}/>
+                        <textarea name="message" cols="30" rows="10" className="w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600" resize="none" placeholder="Message" onChange={handleChange}  value={formData.message}></textarea>
                         <button className="w-full mt-3 text-slate-200 bg-red-500 rounded-md py-2 font-strong">Send Message</button>
 
                     </form>
