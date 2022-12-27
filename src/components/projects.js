@@ -18,7 +18,7 @@ function Projects() {
                                 <p className="sm:text-4xl text-2xl text-red-400 font-extrabold pseudo-line">{project.title}</p>
                                 <div className="flex w-full sm:flex-row flex-col-reverse">
                                     <div className="basis-1/2 flex flex-col justify-between">
-                                        <p className="text-xl  py-3 text-gray-500 hover:text-gray-400">{project.content}</p>
+                                        <p className="text-xl  py-3 text-gray-400 ">{project.content}</p>
                                         <div className="w-full  flex  ">
                                             <button className="flex items-center sm:p-2 p-1 bg-white rounded-md hover:-translate-y-1 ease-in duration-200 sm:ml-3 ml-1">
                                                 <IconContext.Provider value={{ color: "black", size: "2em" }}>
