@@ -15,7 +15,7 @@ function Contact() {
 
     const handleSubmit=async(e)=>{
         e.preventDefault()
-        const response=await fetch("/api/email",
+        const response=await fetch("https://mailhandler.onrender.com/api/email",
         {
         method:'POST',
             body:JSON.stringify(formData),
