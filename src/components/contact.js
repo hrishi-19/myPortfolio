@@ -9,15 +9,38 @@ function Contact() {
         subject:"",
         message:""
     })
+    const[errMsg,seterrMsg]=useState(null)
+    const[fields,setFields]=useState([])
+
 
     const handleSubmit=async(e)=>{
         e.preventDefault()
-        setformData({
+        const response=await fetch("/api/email",
+        {
+        method:'POST',
+            body:JSON.stringify(formData),
+            headers:{
+                'content-type':'application/json'
+            }})
+        const result=await response.json()
+        if(!response.ok){
+            if(response.status===500) seterrMsg(result.msg)
+            if(response.status===400) {
+                setFields(result.nameArray) 
+                seterrMsg(result.msg)}
+            
+        }else{
+           
+            seterrMsg(null)
+            setFields([])
+            setformData({
             name:"",
             email:"",
             subject:"",
             message:""
         })
+        }
+        
        
 
     }
@@ -40,16 +63,18 @@ function Contact() {
                     <form className="w-5/6 h-full sm:p-2 p-0 flex flex-col  text-slate-600" onSubmit={handleSubmit}>
 
 
-                        <input type="text" name="name" className="w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600" placeholder="Full name"  onChange={handleChange} value={formData.name}/>
-                        <input type="text" name="email" className="w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600" placeholder="your Email" onChange={handleChange} value={formData.email}/>
-                        <input type="text" name="subject"  className="w-full mt-3 p-2 bg-slate-200 rounded-md outline-3 outline-cyan-600" placeholder="Subject" onChange={handleChange} value={formData.subject}/>
-                        <textarea name="message" cols="30" rows="10" className="w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600" resize="none" placeholder="Message" onChange={handleChange}  value={formData.message}></textarea>
+                        <input type="text" name="name" className= {fields.includes("name")?"border-2 border-red-500/100 w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600":"w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600"} placeholder="Full name"  onChange={handleChange} value={formData.name} />
+                        <input type="email" name="email" className= {fields.includes("email")?"border-2 border-red-500/100 w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600":"w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600"} placeholder="Your Email" onChange={handleChange} value={formData.email}/>
+                        <textarea name="message" cols="30" rows="10" className= {fields.includes("message")?"border-2 border-red-500/100 w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600":"w-full mt-3 p-2 bg-slate-200  rounded-md outline-3 outline-cyan-600"} resize="none" placeholder="Message" onChange={handleChange}  value={formData.message}></textarea>
                         <button className="w-full mt-3 text-slate-200 bg-red-500 rounded-md py-2 font-strong">Send Message</button>
-
+                        {errMsg&&<div className="bg-red-700 text-white w-fit sm:text-xl text-md px-2 py-3 rounded-md  mt-5">{errMsg}</div>}
                     </form>
+                    
                 </div>
+                
 
             </div>
+            
 
         </div>
     )
