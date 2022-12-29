@@ -20,8 +20,7 @@ function Contact() {
         method:'POST',
             body:JSON.stringify(formData),
             headers:{
-                'content-type':'application/json',
-                'Access-Control-Allow-Origin': '*'
+                'content-type':'application/json'
             }})
         const result=await response.json()
         if(!response.ok){
