@@ -9,6 +9,8 @@ import css from '../static/css.png';
 import firebase from '../static/firebase.png';
 import git from '../static/git.png';
 import Redux from '../static/redux.png'
+import Node from '../static/node.png'
+import Express from '../static/express.png'
 
 
 const skills=[
@@ -39,6 +41,14 @@ const skills=[
     {
         url:Redux,
         name:"Redux"
+    },
+    {
+        url:Node,
+        name:"NodeJs"
+    },
+    {
+        url:Express,
+        name:"expressJs"
     },
     {
         url:HTML,

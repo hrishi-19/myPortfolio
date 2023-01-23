@@ -9,13 +9,13 @@ function Skill() {
             <p className="sm:text-4xl text-2xl text-white font-extrabold py-4 relative pseudo-line">Skills</p>
             <p className="sm:text-2xl text-xl text-gray-300 font-light">Here are some to the technologies that I have worked on</p>
             <p className="sm:text-lg text-md text-white font-semibold mt-5 py-3">GENERAL PROGRAMMING</p>
-            <div className="flex justify-start sm:flex-row flex-col flex-wrap ">
+            <div className="flex justify-start flex-row flex-wrap ">
                 {
                     programming.map((item,index) => {
                         return (
-                            <div  key={index} className="skill-box sm:w-min w-5/6  rounded-md flex justify-between items-center  py-1 px-2 text-gray-300 text-lg sm:mt-3 mt-5 ml-5">
+                            <div  key={index} className="skill-box sm:w-min w-max   rounded-md flex justify-between items-center  py-1 px-2 text-gray-300 text-lg sm:mt-3 mt-5 ml-5">
                                 <img className="no-select" src={item.url} alt={item.name} />
-                                <p className=" no-select w-40 text-start px-5 font-thin">{item.name}</p>
+                                <p className=" no-select w-40 text-start px-5 font-thin sm:block hidden ">{item.name}</p>
                             </div>
                         )
                     })
@@ -24,13 +24,13 @@ function Skill() {
             </div>
 
             <p className="sm:text-lg text-md text-white font-semibold mt-5 py-3">FRAMEWORKS AND TOOLS</p>
-            <div className="flex justify-start sm:flex-row flex-col flex-wrap ">
+            <div className="flex justify-start flex-row flex-wrap ">
                 {
                     framework.map((item,index) => {
                         return (
-                            <div key={index}className="skill-box sm:w-min w-5/6  rounded-sm flex justify-between items-center  py-1 px-2 text-gray-300 text-lg sm:mt-3 mt-5 ml-5">
+                            <div key={index}className="skill-box sm:w-min w-max  rounded-sm flex justify-between items-center  py-1 px-2 text-gray-300 text-lg sm:mt-3 mt-5 ml-5">
                                 <img className="no-select" src={item.url} alt={item.name} />
-                                <p className=" no-select w-40 text-start px-5 font-thin">{item.name}</p>
+                                <p className=" no-select w-40 text-start px-5 font-thin sm:block hidden ">{item.name}</p>
                             </div>
                         )
                     })
