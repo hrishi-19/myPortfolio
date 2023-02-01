@@ -28,7 +28,7 @@ function Skill() {
                 {
                     framework.map((item,index) => {
                         return (
-                            <div key={index}className="skill-box sm:w-min w-max  rounded-sm flex justify-between items-center  py-1 px-2 text-gray-300 text-lg sm:mt-3 mt-5 ml-5">
+                            <div key={index}className="skill-box sm:w-min w-max  rounded-md flex justify-between items-center  py-1 px-2 text-gray-300 text-lg sm:mt-3 mt-5 ml-5">
                                 <img className="no-select" src={item.url} alt={item.name} />
                                 <p className=" no-select w-40 text-start px-5 font-thin sm:block hidden ">{item.name}</p>
                             </div>
