@@ -11,7 +11,7 @@ function Projects() {
             {
                 projects.map((project, index) => {
                     return (
-                        <div className="w-full mt-4  ">
+                        <div className="w-full mt-4  " key={index}>
 
                             <div className="skill-box sm:w-4/5 w-full p-5 ">
 
