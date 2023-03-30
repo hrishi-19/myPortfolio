@@ -51,7 +51,7 @@ function Home() {
             <p className="sm:text-4xl text-2xl text-white font-extrabold py-4 relative pseudo-line">About</p>
             <p className="text-gray-500 text-xl  sm:px-3 sm:py-5 px-1 py-3">
                 I enjoy creating things that live on the internet.
-                 I am a passionate Developer, with stong administartive and communication skills, good attention to details and ability to write efficient code.I am a community-driven person, loves building projects which would help tackle a real world problem. Currently I'm working as a Product Development Intern at Chipster.
+                I am a passionate Developer, with strong administrative and communication skills, good attention to details and ability to write efficient code.I am a community-driven person, loves building projects which would help tackle a real world problem. Currently I'm working as a Product Development Intern at Chipster.
             </p>
             </div>
             <div className="skill-box w-full sm:p-5 p-3 mt-5">
